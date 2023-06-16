@@ -23,6 +23,10 @@ int *Cards::find(std::string type,std::string num){
     
 }
 
+int Cards::getVal(int num) const{
+            return cardVal[num];
+        }
+
 void Cards::remove_at(int type,int num){
     Matrix.at(type).at(num) = "NULL";
 }
@@ -43,6 +47,34 @@ std::string Cards::display(std::string type,std::string num){
     int *data = find(type,num);
 
     return cardNum.at(data[1]) + " " + cardType.at(data[0]);
+}
+
+std::string Cards::getType(int type) const{
+    return cardType.at(type);
+}
+
+std::string Cards::getNum(int num) const{
+    return cardNum.at(num);
+}
+
+int Cards::findNum(std::string num){
+    int i=0;
+    while (num!=cardNum.at(i))
+    {
+        i++;
+    }
+
+    return i;
+}
+
+int Cards::getVal(int num) const{
+    return cardVal[num];
+}
+
+int Cards::getVal(std::string num){
+    int index = findNum(num);
+
+    return cardVal[index];
 }
 
 Cards::Cards(){

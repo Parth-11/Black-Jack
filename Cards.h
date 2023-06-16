@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include <string>
 
@@ -12,7 +13,12 @@ class Cards{
         void remove_at(int type,int num);
         void pull_card();
         int *find(std::string,std::string);
+        int findNum(std::string);
         std::string display(std::string,std::string);
+        int getVal(int) const;
+        std::string getType(int type) const;
+        std::string getNum(int num) const;
+        int getVal(std::string num);
 
 
         Cards();
