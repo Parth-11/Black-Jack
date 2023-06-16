@@ -1,6 +1,6 @@
 # Black-Jack
 A new C++ project
 
-#Objective
+# Objective
 
 A text based game project.
